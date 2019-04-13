@@ -69,10 +69,12 @@ For Python, all data even primitive types like integer or float are objects.
 	<tr><td>declare x=1, y=1</td>
 	<td>Same object in memory heap (memory optimization)</td>
 	<td>two different memory locations</td>
-	<td>two different memory locations</td>
-	<td>Python virtual machine</td></tr>
+	<td>two different memory locations</td></tr>
 </table>
 
+
+<h2>Python virtual machine</h2>
+	
 Python runs on a virtual machine called CPython which interprets the developer’s code. Interpreted language allows coders to abstract the complexity of programming in machine language. The interpreted languages ​​are translated into machine language during running which is slower than compiling languages that translate into machine language only once. 
 
 
