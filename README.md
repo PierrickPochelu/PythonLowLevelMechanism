@@ -9,34 +9,36 @@ Information about Python mechanism on the web is very sparse. That’s why I hav
 If you don’t know Python, here is a brief comparison between Python and other object-oriented languages.
 Main features
 
-
-	Python
-	Java
-	C++
-	Time ratio of native languages compared to C++ (O2-optimization)*
-	25 (python 2.7)
-18 (python 3.7)
-1.6 (python 2.7+Pypy)
-	12 (java 8)
-1.15 (java 8 + non std library)
-	-
-	Run with VM *
-	yes
-	yes
-	no
-	Dynamically typed *
-	yes
-	no
-	no
-	Garbage collected
-	yes
-	yes
-	no
-	Memory immediately released
-	yes *
-	no
-	yes
-	
+<table>
+	<tr>
+		<td></td>
+	<td>Python</td>
+	<td>Java</td>
+	<td>C++</td></tr>
+	<tr><td>Time ratio of native languages compared to C++ (O2-optimization)*</td>
+	<td>25 (python 2.7)<br/>
+<td>18 (python 3.7)<br/>
+<td>1.6 (python 2.7+Pypy)</td>
+	<td>12 (java 8)</td>
+<td>1.15 (java 8 + non std library)</td>
+	<td>-</td></tr>
+	<tr><td>Run with VM *</td>
+	<td>yes</td>
+	<td>yes</td>
+	<td>no</td></tr>
+	<tr><td>Dynamically typed *</td>
+	<td>yes</td>
+	<td>no</td>
+	<td>no</td></tr>
+	<tr><td>Garbage collected</td>
+	<td>yes</td>
+	<td>yes</td>
+	<td>no</td></tr>
+	<tr><td>Memory immediately released</td>
+	<td>yes *</td>
+	<td>no</td>
+	<td>yes</td></tr>
+</table>
 
 * The benchmark here is not complete but it allows us to feel Python standard language is slower than Java which is itself slower than C++.
 * Features which increase running time the most.
