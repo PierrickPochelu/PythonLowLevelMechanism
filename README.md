@@ -52,23 +52,26 @@ For Python, all data even primitive types like integer or float are objects.
 
 
 
-
-	Python
-	Java
-	C++
-	Declare x=1
-	Instantiates object in memory heap
-	Creates primitive value 1
-	Creates primitive value 1
-	What x contains
-	reference to x value
-	binary value 1
-	binary value 1
-	declare x=1, y=1
-	Same object in memory heap (memory optimization)
-	two different memory locations
-	two different memory locations
-	Python virtual machine
+<table>
+	<tr>
+		<td></td>
+	<td>Python</td>
+	<td>Java</td>
+	<td>C++</td></td>
+	<tr><td>Declare x=1</td>
+	<td>Instantiates object in memory heap</td>
+	<td>Creates primitive value 1</td>
+	<td>Creates primitive value 1</td></tr>
+	<tr><td>What x contains</td>
+	<td>reference to x value</td>
+	<td>binary value 1</td>
+	<td>binary value 1</td></tr>
+	<tr><td>declare x=1, y=1</td>
+	<td>Same object in memory heap (memory optimization)</td>
+	<td>two different memory locations</td>
+	<td>two different memory locations</td>
+	<td>Python virtual machine</td></tr>
+	
 Python runs on a virtual machine called CPython which interprets the developer’s code. Interpreted language allows coders to abstract the complexity of programming in machine language. The interpreted languages ​​are translated into machine language during running which is slower than compiling languages that translate into machine language only once. 
 
 
