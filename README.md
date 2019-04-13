@@ -127,8 +127,8 @@ pc is init to 0,
 
 (1) Read bytecode instruction in position pc : Read the byte operation, read two bytes operand if present.
 (2) Compute next pc : if operand is present, pc += 3 otherwise pc += 1
- (3) Run the instruction
- (4) Go to step 1
+(3) Run the instruction
+(4) Go to step 1
 
 
 [source]
@@ -139,12 +139,14 @@ It’s possible to see the bytecode of any Python code. The module dis allows to
 
 
 My function to disassemble
+<pre>
 def my_function(a):
     b=a*3
     return b
-
+</pre>
 
 Function to read bytes code
+<pre>
 import dis
 def func_obj(fo):
     print(fo.__name__)
@@ -153,13 +155,15 @@ def func_obj(fo):
     print('Source Line  m  operation/byte-code      operand (useful name/number)')
     print('---------------------------------------------------------------------')
     dis.dis(fo)
-
+</pre>
 
 Call it
+<pre>
 func_obj(my_function)
-
+</pre>
 
 Output
+<pre>
 ('  co_varnames:', ('a', 'b'))
 ('  co_consts  :', (None, 3))
 Source Line  m  operation/byte-code      operand (useful name/number)
@@ -172,6 +176,7 @@ Source Line  m  operation/byte-code      operand (useful name/number)
 
   3          10 LOAD_FAST                1 (b)
              13 RETURN_VALUE        
+</pre>
 
 <h2> Memory management </h2>
 Like many other programming languages, Python uses two memory locations : 
@@ -210,13 +215,14 @@ Objects can be referenced either by variables or by other objects. “del” key
 
 To see when an object is destroyed, we create a specific object destructor which prints something on screen. Object destructors are called at the end of the object’s lifetime just before the memory is released (mechanism presents in C++ too).
 
-
+<pre>
 class MyClass():
     def __del__(self):
         print("destroy")
-
+</pre>
 
 Example 1 - variable mechanism
+<pre>
 a=MyClass() # object is referenced 1 time
 b=a # object is referenced 2 times (a->object and b->object)
 print("delete a")
@@ -225,7 +231,7 @@ print("delete b")
 del b # object is no more referenced and destroy from memory
 print("program finish")
 exit()
-
+<pre>
 
 
 
