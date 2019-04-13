@@ -94,8 +94,10 @@ This section explains what bytecode is.
 Example of Python instruction :
 d = (a+b)*c
 
+
 Equivalence in bytecode :
- Memory      Instruction
+<code>
+Memory      Instruction
 Location   
 --------------------------
   0         LOAD_FAST 0
@@ -104,7 +106,7 @@ Location
   9         BINARY_MULTIPLY
  10         BINARY_ADD
  11         STORE_FAST 3
-
+</code>
 
 The operand gives the position of the variable in the line. The variable ‘a’ is in position 0, b in 1, c in 2 and d in 3.
 
