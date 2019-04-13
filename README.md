@@ -22,7 +22,6 @@ Main features
 	<td>12 (java 8)<br/>
 	1.15 (java 8 + non std library)</td>
 	<td>1</td></tr>
-	
 	<tr><td>Run with VM *</td>
 	<td>yes</td>
 	<td>yes</td>
