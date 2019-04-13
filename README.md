@@ -15,7 +15,6 @@ Main features
 	<td>Python</td>
 	<td>Java</td>
 	<td>C++</td></tr>
-	
 	<tr><td>Time ratio of native languages compared to C++ (O2-optimization)*</td>
 	<td>25 (python 2.7)<br/>
 <td>18 (python 3.7)<br/>
