@@ -74,25 +74,27 @@ For Python, all data even primitive types like integer or float are objects.
 
 
 <h2>Python virtual machine</h2>
-	
+<p>	
 Python runs on a virtual machine called CPython which interprets the developer’s code. Interpreted language allows coders to abstract the complexity of programming in machine language. The interpreted languages ​​are translated into machine language during running which is slower than compiling languages that translate into machine language only once. 
+</p>
 
-
+<p>
 In principle, CPython of Python work exactly in the same way as Java’s JVM.
 Interpretation process
 We can draw the interpretation process as follows :
 1. There is Python code to run (.py files)
 2. CPython translates Python into bytecode (.pyc files)
 3. CPython interprets bytecode
+</p>
 
-
+<p>
 The Python virtual machine (CPython) compiles bytecode and save it as cache on disk. This compilation mechanism allows to prevent CPython from having to recompile from scratch everytime code is interpreted which is much faster. Therefore Python is not purely an interpreted language : one part is compiled into bytecode and bytecode is interpreted on the fly.
 Bytecode language
 This section explains what bytecode is.
-
+</p>
 
 Example of Python instruction :
-d = (a+b)*c
+<pre>d = (a+b)*c</pre>
 
 
 Equivalence in bytecode :
@@ -110,11 +112,11 @@ Location
 
 The operand gives the position of the variable in the line. The variable ‘a’ is in position 0, b in 1, c in 2 and d in 3.
 
-
+<p>
 Bytecode instructions are written with 1 or 3 bytes :
 * The first byte codes the operation (ex:LOAD_FAST). 
 * The next two bytes code the operand if present. Therefore Python cannot have more than 2^16 variables in a scope.
-
+</p>
 
 <h2> Bytecode interpreter </h2>
 Python uses a stack-based virtual machine. CPython interpreter runs the algorithm below which is a classic approach in computer science.
