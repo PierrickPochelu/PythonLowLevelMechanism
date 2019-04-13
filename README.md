@@ -354,29 +354,31 @@ exit()
 </pre>
 
 [source]
-doc : http://cms.digi.com/resources/documentation/digidocs/90001537/#references/r_python_garbage_coll.htm?Highlight=garbage
+*  doc : http://cms.digi.com/resources/documentation/digidocs/90001537/#references/r_python_garbage_coll.htm?Highlight=garbage
+
+
+
 
 <h2>Memory profiler</h2>
 There are many ways to profile memory python code. Profile memory management can be useful to efficiently manage big objects, increase running time or correct a memory leak issue.
+
 objgraph module
    * Lists objects in memory
    * Draws dependency graph
    * Shows delta between two-time steps
 [source]
 official doc : https://mg.pov.lt/objgraph/
+
 memory_profiler module
    * Traces memory consumption depending on time
    * Profiles code : memory use for each instruction
 [source]
 official doc : https://pypi.org/project/memory_profiler/
-heapy module
-   * Displays an explanation of memory consumption by dumping stats
 
 
+heapy module. Displays an explanation of memory consumption by dumping stats
 [source]
-official doc : http://guppy-pe.sourceforge.net/#Heapy
-blog : http://smira.ru/wp-content/uploads/2011/08/heapy.html
-gc module
-   * The garbage collector allows to check the number of objects in memory and can detect memory leak issues.
-[source]
-gc : https://docs.python.org/3/library/gc.html
+* official doc : http://guppy-pe.sourceforge.net/#Heapy
+* blog : http://smira.ru/wp-content/uploads/2011/08/heapy.html
+
+gc module. The garbage collector allows to check the number of objects in memory and can detect memory leak issues. Let's see gc module  https://docs.python.org/3/library/gc.html
