@@ -96,7 +96,7 @@ d = (a+b)*c
 
 
 Equivalence in bytecode :
-<code>
+<pre>
 Memory      Instruction
 Location   
 --------------------------
@@ -106,7 +106,7 @@ Location
   9         BINARY_MULTIPLY
  10         BINARY_ADD
  11         STORE_FAST 3
-</code>
+</pre>
 
 The operand gives the position of the variable in the line. The variable ‘a’ is in position 0, b in 1, c in 2 and d in 3.
 
