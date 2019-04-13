@@ -179,6 +179,8 @@ Source Line  m  operation/byte-code      operand (useful name/number)
 </pre>
 
 <h2> Memory management </h2>
+
+<h3> Allocate and deallocate </h3>
 Like many other programming languages, Python uses two memory locations : 
 * private heap memory : contains objects. The management of the heap is ensured by the Memory Manager and not directly by the OS Memory Manager.
 * stack memory : contains the code of functions.
@@ -201,7 +203,8 @@ The private heap memory is managed by Memory Manager (and not directly by the OS
 
 [source]
 memory management : https://docs.python.org/3/c-api/memory.html
-Garbage Collector
+
+<h3> Garbage collector </h3>
 The main goal of garbage is to detect unusable variables and destroy them to free memory.
 
 
