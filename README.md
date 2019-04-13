@@ -22,11 +22,11 @@ Main features
 	<td>12 (java 8)<br/>
 		1.15 (java 8 + non std library)</td>
 	<td>1</td></tr>
-	<tr><td>Run with VM *</td>
+	<tr><td>Run with VM [1]</td>
 	<td>yes</td>
 	<td>yes</td>
 	<td>no</td></tr>
-	<tr><td>Dynamically typed *</td>
+	<tr><td>Dynamically typed [2]</td>
 	<td>yes</td>
 	<td>no</td>
 	<td>no</td></tr>
@@ -35,14 +35,14 @@ Main features
 	<td>yes</td>
 	<td>no</td></tr>
 	<tr><td>Memory immediately released</td>
-	<td>yes *</td>
+	<td>yes [3]</td>
 	<td>no</td>
 	<td>yes</td></tr>
 </table>
 
-* The benchmark here is not complete but it allows us to feel Python standard language is slower than Java which is itself slower than C++.
-* Features which increase running time the most.
-* Reference cycles are not immediately released
+[1] The benchmark here is not complete but it allows us to feel Python standard language is slower than Java which is itself slower than C++.
+[2] Features which increase running time the most.
+[3] Reference cycles are not immediately released
 
 
 [source]
