@@ -282,9 +282,11 @@ Cons :
 
    * blog : http://arctrix.com/nas/python/gc/
    * doc : http://cms.digi.com/resources/documentation/digidocs/90001537/#references/r_python_garbage_coll.htm?Highlight=garbage
-Garbage Collector 2 : Garbage Collection
+
+<h3>Garbage Collector 2 : Garbage Collection</h3>
 This an optional garbage collector which can be enabled/disabled by the coder. The only goal of this garbage collector is to find cycles by scanning objects.  Because reference cycles take time to calculate, this garbage collection algorithm has to be scheduled. Coders can  call it manually to scan cycles or schedule the frequency of those scans.
-Manually call
+
+<h4>Manually call</h4>
 In order to perform well, the algorithm often scans new objects and rarely old objects.
 
 
@@ -320,12 +322,12 @@ print("4) garbage.collect()="+str(gc.collect())) # cycle was deleted
 exit()
 </pre>
 
-Schedule calls : Generational Garbage Collection
+<h4> Schedule calls : Generational Garbage Collection </h4>
 All alloc() operations should finish by a free(). The difference between the allocation count and the release count slowly grows because of cycles or objects with a long lifetime. When this delta is high enough in one generation, the algorithm scans objects in this generation. The frequency for each generation is a parameter of the algorithm.
 
 
 
-  
+  <img src="generational_garbage_collector.PNG"/>
 
 Example 5 - generational garbage collector
 <pre>
@@ -353,7 +355,8 @@ exit()
 
 [source]
 doc : http://cms.digi.com/resources/documentation/digidocs/90001537/#references/r_python_garbage_coll.htm?Highlight=garbage
-Memory profiler
+
+<h2>Memory profiler</h2>
 There are many ways to profile memory python code. Profile memory management can be useful to efficiently manage big objects, increase running time or correct a memory leak issue.
 objgraph module
    * Lists objects in memory
