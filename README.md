@@ -231,22 +231,24 @@ print("delete b")
 del b # object is no more referenced and destroy from memory
 print("program finish")
 exit()
-<pre>
+</pre>
 
 
 
 Example 2 - function and variable scope
+<pre>
 def F():
     a=MyClass() # object is referenced by variable. ref count : 1
     # when exist function object is not referenced. ref count : 0. So it is destroyed.
 F()
 print("program finish")
 exit() # object is destroy
-
+</pre>
 
 
 
 Example 3 - cycle reference
+<pre>
 class MyList(list): # This object is a list with specific destructor
     def __del__(self):
         print("destroy")
@@ -258,7 +260,7 @@ del a
 del b
 print("program finish")
 exit() # object is not destroy but lost in the python heap memory ! # Object are sweep when python process is finished, the destructor is not called.
-
+</pre>
 
 
 
@@ -287,22 +289,25 @@ The objects still useful are sent to the next generation whereas the useless one
 
 
 Example 4 - Use generational garbage collector manually
+<pre>
 def make_one_cycle():
     a=list()
     a.append(a)
     return a
 a=make_one_cycle()
 b=make_one_cycle()
+</pre>
+
+<pre>
 print("1) garbage.collect()="+str(gc.collect()))
 del a
 del b
 print("2) garbage.collect()="+str(gc.collect()))# 2 cycle was deleted
 print("3) garbage.collect()="+str(gc.collect()))
 exit()
+</pre>
 
-
-
-
+<pre>
 print("2) garbage.collect()="+str(gc.collect()))
 del a
 del b
@@ -310,7 +315,7 @@ print("3) garbage.collect()="+str(gc.collect()))
 time.sleep(3)
 print("4) garbage.collect()="+str(gc.collect())) # cycle was deleted
 exit()
-
+</pre>
 
 Schedule calls : Generational Garbage Collection
 All alloc() operations should finish by a free(). The difference between the allocation count and the release count slowly grows because of cycles or objects with a long lifetime. When this delta is high enough in one generation, the algorithm scans objects in this generation. The frequency for each generation is a parameter of the algorithm.
@@ -320,6 +325,7 @@ All alloc() operations should finish by a free(). The difference between the all
   
 
 Example 5 - generational garbage collector
+<pre>
 def make_one_cycle():
     a=[]
     a.append(a)
@@ -340,7 +346,7 @@ for i in range(10): # variable i is an object too
 # see remaining objects
 print("end with = " +str(gc.get_count())) # some cycles are still here
 exit()
-
+</pre>
 
 [source]
 doc : http://cms.digi.com/resources/documentation/digidocs/90001537/#references/r_python_garbage_coll.htm?Highlight=garbage
