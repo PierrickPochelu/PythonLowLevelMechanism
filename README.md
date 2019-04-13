@@ -17,10 +17,10 @@ Main features
 	<td>C++</td></tr>
 	<tr><td>Time ratio of native languages compared to C++ (O2-optimization)*</td>
 	<td>25 (python 2.7)<br/>
-<td>18 (python 3.7)<br/>
-<td>1.6 (python 2.7+Pypy)</td>
+		18 (python 3.7)<br/>
+		1.6 (python 2.7+Pypy)</td>
 	<td>12 (java 8)<br/>
-	1.15 (java 8 + non std library)</td>
+		1.15 (java 8 + non std library)</td>
 	<td>1</td></tr>
 	<tr><td>Run with VM *</td>
 	<td>yes</td>
